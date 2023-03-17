@@ -1,0 +1,34 @@
+#include <stdio.h>
+/* more headers goes there */
+
+/**
+ * main - Entry point
+ * Description:alphabet  program.
+ * Return: (0) always - Success
+ */
+int main(void)
+{
+	int ch = 0;
+	int b = 0;
+	int c = 0;
+
+	for (ch = 0; ch < 8; ch++)
+	{
+		for (b = ch + 1; b < 9; b++)
+		{
+			for (c = b + 1; c <= 9; c++)
+			{
+				putchar('0' + ch);
+				putchar('0' + b);
+				putchar('0' + c);
+				if (ch < 7)
+				{
+					putchar(',');
+					putchar(' ');
+				}
+			}
+		}
+	}
+	putchar('\n');
+	return (0);
+}
