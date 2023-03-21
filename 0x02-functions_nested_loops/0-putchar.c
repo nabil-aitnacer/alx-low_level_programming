@@ -1,10 +1,8 @@
 #include "main.h"
 /**
- * main a program that prints _putchar, followed by a new line.
+ * main - Entry point
  *
- *
- * Return: On success 1.
- * On error, -1 is returned, and errno is set appropriately.
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
@@ -17,6 +15,5 @@ int main(void)
 	_putchar('a');
 	_putchar('r');
 	_putchar('\n');
-
 	return (0);
 }
