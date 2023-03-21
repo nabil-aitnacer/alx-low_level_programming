@@ -1,10 +1,9 @@
 #include "main.h"
+
 /**
- * print_alphabet  a function that prints the alphabet, in lowercase,
+ * print_alphabet - a function that prints the alphabet, in lowercase
  *
- *
- * Return: On success 1.
- * On error, -1 is returned, and errno is set appropriately.
+ * Return: Always 0 (Succes)
  */
 void print_alphabet(void)
 {
