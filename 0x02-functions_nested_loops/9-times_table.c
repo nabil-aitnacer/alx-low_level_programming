@@ -14,11 +14,13 @@ void times_table(void)
 		{
 			int d = a * b;
 
-			_putchar(d);
+			_putchar(d + '0');
 			_putchar(',');
 			if (d < 10)
 				_putchar(' ');
 			_putchar(' ');
 		}
+
+		_putchar('\n');
 	}
 }
