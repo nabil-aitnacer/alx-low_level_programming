@@ -1,5 +1,5 @@
 #include "main.h"
-
+#include <stdlib.h>
 /**
  *print_last_digit - a function that computes the absolute value of an integer
  *@n : number
@@ -8,7 +8,8 @@
 
 int print_last_digit(int n)
 {
-	int a = n % 10;
+	int c = abs(n);
+	int a = c % 10;
 
 	_putchar('0' + a);
 
