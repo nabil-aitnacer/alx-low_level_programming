@@ -1,13 +1,13 @@
 #include "main.h"
 
 /**
- * rev_string  - a function that reverses a string.
+ * print_rev -  a function that prints a string, in reverse, followed by a new
  * @s : String param
  *
  * Return:  the length of a string.
  */
 
-void rev_string(char *s)
+void print_rev(char *s)
 {
 	int i, j, len;
 
@@ -18,11 +18,10 @@ void rev_string(char *s)
 		len++;
 	}
 
-	for (i = 0, j = len - 1; i < j; i++, j--)
+	for (j = len -1; j >= 0; j--)
 	{
-		char temp = s[i];
+		_putchar(s[j]);
 
-		s[i] = s[j];
-		s[j] = temp;
 	}
+	_putchar('\n');
 }
