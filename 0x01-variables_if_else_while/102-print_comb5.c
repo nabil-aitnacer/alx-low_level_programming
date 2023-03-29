@@ -1,38 +1,29 @@
 #include <stdio.h>
 
-/**
- * main - create 2 pairs of numbers that do not repeat
- * Return: 0
+/**                                                                                                                                                                                                                * main - create all pairs of two-digit numbers that do not repeat                                                                                                                                                 * Return: 0                                                                                                                                
  */
 int main(void)
 {
-	int ch = 0;
-	int b = 0;
-	int c = 0;
-	int d = 0;
+        int num1_tens, num1_ones, num2_tens, num2_ones;
 
-	for (d = 0; d <= 9; d++)
-	{
-		for (ch = 0; ch <= 8; ch++)
-		{
-			for (b = 0; b <= 8; b++)
-			{
-				for (c =  1; c <= 9; c++)
-				{
-					putchar('0' + d);
-					putchar('0' + ch);
-					putchar(' ');
-					putchar('0' + b);
-					putchar('0' + c);
-					if (ch < 7)
-					{
-						putchar(',');
-						putchar(' ');
-					}
-				}
-			}
-		}
-	}
-	putchar('\n');
-	return (0);
+        for (num1_tens = 0; num1_tens <= 9; num1_tens++) {
+                for (num1_ones = 0; num1_ones <= 9; num1_ones++) {
+                        for (num2_tens = num1_tens; num2_tens <= 9; num2_tens++) {
+                                for (num2_ones = (num2_tens == num1_tens) ? num1_ones + 1 : 0; num2_ones <= 9; num2_ones++) {
+                                        putchar('0' + num1_tens);
+                                        putchar('0' + num1_ones);
+                                        putchar(' ');
+                                        putchar('0' + num2_tens);
+                                        putchar('0' + num2_ones);
+                                        if (num1_tens < 9 || num1_ones < 8 || num2_tens < 9 || num2_ones < 9) {
+                                                putchar(',');
+                                                putchar(' ');
+                                        }
+                                }
+                        }
+                }
+        }
+
+        putchar('\n');
+        return (0);
 }
